@@ -1,0 +1,145 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Righteous', cursive;
+}
+
+h2 {
+  font-family: 'Righteous', cursive;
+}
+
+h4 {
+  color: white;
+  font-size: small;
+  font-family: 'Quicksand', sans-serif;
+}
+
+h5 {
+  color: white;
+  font-size: smaller;
+  font-family: 'Quicksand', sans-serif;
+}
+
+p {
+  margin: 0px;
+}
+
+header {
+  background-color: #f5cc27;
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+header a:hover {
+  color: black;
+}
+
+header nav ul a {
+  text-decoration: none;
+  color: black;
+}
+
+header nav ul a:hover {
+  color: #686868;
+}
+
+header nav ul li {
+  list-style-type: none;
+  margin-right: 1rem;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-family: 'Quicksand', sans-serif;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
+  border-radius: 0.3rem;
+}
+
+footer {
+  background-color: black;
+}
+
+footer p {
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.tienda__titulo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #0e0e0e;
+}
+
+.tienda__titulo h2 {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  background-color: #f5cc27;
+  color: black;
+  padding: 0rem 0.5rem;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+}
+
+.catalogo {
+  background-color: #0e0e0e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.catalogo .producto {
+  background-color: black;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  border-radius: 1rem;
+  width: 25%;
+  height: 33%;
+  margin: 0rem 1rem 2rem 1rem;
+}
+
+.catalogo .producto button {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.catalogo .producto button:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: black;
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,118 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+html{
+    box-sizing: border-box;
+}
+h1{
+    font-family: 'Righteous', cursive;
+}
+h2{
+    font-family: 'Righteous', cursive;
+}
+h4{
+    color: white;
+    font-size: small;
+    font-family: 'Quicksand', sans-serif;
+}
+h5{
+    color: white;
+    font-size: smaller;
+    font-family: 'Quicksand', sans-serif;
+}
+p{
+    margin: 0px;
+}
+
+
+header{
+    background-color: rgb(245, 204, 39);
+    padding-right: 1.5rem!important;
+    padding-left: 1.5rem!important;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    a:hover{
+        color: black;
+    }
+    nav{
+        ul{
+            a{
+                text-decoration: none;
+                color: black;
+            }
+            a:hover{
+                color: rgb(104, 104, 104);
+            }
+            li{
+                list-style-type: none;
+                margin-right: 1rem;
+                padding:0.3rem;
+                border-radius:0.3rem;
+                transition:0.3s;
+                font-family: 'Quicksand', sans-serif;
+                border-style:solid;
+                border-width: 1px;
+                border-color: transparent;
+                border-radius:  0.3rem;
+            }
+        }
+    }
+}
+
+footer{
+    background-color:black;
+    p{
+        color: white;
+        font-family: 'Quicksand', sans-serif;
+    }
+    
+}
+
+.tienda__titulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color:rgb(14, 14, 14);
+    h2{
+        width: min-content;
+        background-color:rgb(245, 204, 39);
+        color: black;
+        padding: 0rem 0.5rem;
+        border-bottom-left-radius:  0.3rem;
+        border-bottom-right-radius:  0.3rem;
+    }
+}
+
+.catalogo{
+    background-color: rgb(14, 14, 14);
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    
+    .producto{
+        background-color: black;
+        border-style:solid;
+        border-width: 1px;
+        border-color: white;
+        border-radius: 1rem;
+        width: 25%;
+        height: 33%;
+        margin: 0rem 1rem 2rem 1rem;
+        button{
+            transition: 0.5s;
+            font-family: 'Quicksand', sans-serif;
+        }
+        button:hover{
+            transition: 0.5s;
+            background-color:black;
+            color: white;
+        }
+    }
+}
+
+
+
