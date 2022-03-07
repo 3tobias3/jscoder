@@ -4,6 +4,7 @@ function AgregarAlCarrito(nombreDelProducto , precio , cantidadStock ){
     const validarStock = (cantidadStock >= cantidadPedida)
         if (validarStock){
         console.log(`Agregaste al carrito ${cantidadPedida} ${nombreDelProducto} a $${total}`)
+        alert(`¡Gracias por comprar en Rekord House!`)
         } else{
             console.log(`No hay suficiente stock de este producto`)
         }
@@ -28,7 +29,6 @@ function MasProductos (){
                 eleccionDeProducto = prompt(`También podria interesarle: \n 1) Swimming - Mac Miller \n 2)Blonde - Frank Ocean \n 3) El Disko - Ca7riel \n Ingrese el número del producto que desea comprar, para salir, ingrese 0`) 
         }
     }while ((eleccionDeProducto < 0) || (eleccionDeProducto > 3))
-    alert(`¡Gracias por comprar en Rekord House!`)
 }
 
 //Tobías De Cancellis
