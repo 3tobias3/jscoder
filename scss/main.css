@@ -70,6 +70,17 @@ header nav ul li {
   border-radius: 0.3rem;
 }
 
+header nav ul .btn__carrito {
+  background-color: black;
+  color: white;
+}
+
+header nav ul .btn__carrito:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #a7a7a7;
+}
+
 footer {
   background-color: black;
 }

@@ -58,6 +58,14 @@ header{
                 border-color: transparent;
                 border-radius:  0.3rem;
             }
+            .btn__carrito{
+                background-color:black;
+                color: white;
+            }
+            .btn__carrito:hover{
+                transition: 0.3s;
+                color: rgb(167, 167, 167);
+            }
         }
     }
 }

@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce</title>
-    <script src="src/main.js">
-    </script>
+    <script src="src/main.js"></script>
+    <script src="src/practica.js"> </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="scss/main.css">
     <style>
@@ -23,7 +23,7 @@
             <ul class="d-flex flex-row pt-2">
                 <a href=""><li>Iniciar Sesión</li></a>
                 <a href=""><li>Registrarse</li></a>
-                <a href=""><li>Ver carrito</li></a>
+                <button onclick="MostrarCarrito()" type="button" class="btn btn__carrito">Ver carrito</button>
             </ul>
         </nav>
     </header>
@@ -36,37 +36,37 @@
             <img class="img-fluid" src="imgs/beerbongs.jpg" alt="Beerbongs&Bentleys">
             <h4 class="text-center py-2">Beerbongs & Bentleys - Post Malone</h4>
             <h5>$4.999</h5>
-            <button onclick="AgregarAlCarrito(`Beerbongs & Bentleys - Post Malone` , 4.999 , 10 ) ,  MasProductos()" type="button" class="btn btn-light">Agregar al carrito</button>
+            <button onclick="producto1.agregarAlCarrito(producto1) ,  MasProductos()" type="button" class="btn btn-light">Agregar al carrito</button>
         </div>
         <div class="producto p-3 d-flex flex-column align-items-center ">
             <img class="img-fluid" src="imgs/blonde.jpeg" alt="Blonde">
             <h4 class="text-center py-2">Blonde - Frank Ocean</h4>
             <h5>$4.499</h5>
-            <button onclick="AgregarAlCarrito(`Blonde - Frank Ocean` , 4.499 , 0 )" type="button" class="btn btn-light">Agregar al carrito</button>
+            <button onclick="producto2.agregarAlCarrito(producto2)" type="button" class="btn btn-light">Agregar al carrito</button>
         </div>
         <div class="producto p-3 d-flex flex-column align-items-center">
             <img class="img-fluid" src="imgs/swimming.jpg" alt="Swimming">
             <h4 class="text-center py-2">Swimming - Mac Miller</h4>
             <h5>$5.499</h5>
-            <button onclick="AgregarAlCarrito(`Swimming - Mac Miller` , 5.499 , 5 )" type="button" class="btn btn-light">Agregar al carrito</button>
+            <button onclick="producto3.agregarAlCarrito(producto3)" type="button" class="btn btn-light">Agregar al carrito</button>
         </div>
         <div class="producto p-3 d-flex flex-column align-items-center">
             <img class="img-fluid" src="imgs/amoon.jpg" alt="AMoonShapedPool">
             <h4 class="text-center py-2">A Moon Shaped Pool - Radiohead</h4>
             <h5>$5.499</h5>
-            <button onclick="AgregarAlCarrito(`A Moon Shaped Pool - Radiohead` , 5.499 , 5 )" type="button" class="btn btn-light">Agregar al carrito</button>
+            <button onclick="producto4.agregarAlCarrito(producto4)" type="button" class="btn btn-light">Agregar al carrito</button>
         </div>
         <div class="producto p-3 d-flex flex-column align-items-center">
             <img class="img-fluid" src="imgs/inrainbws.jpg" alt="InRainbows">
             <h4 class="text-center py-2">In Rainbows - Radiohead</h4>
             <h5>$4.999</h5>
-            <button onclick="AgregarAlCarrito(`In Rainbows - Radiohead` , 4.999 , 8 )" type="button" class="btn btn-light">Agregar al carrito</button>
+            <button onclick="producto5.agregarAlCarrito(producto5)" type="button" class="btn btn-light">Agregar al carrito</button>
         </div>
         <div class="producto p-3 d-flex flex-column align-items-center">
             <img class="img-fluid" src="imgs/eldisko.jpg" alt="ElDisko">
             <h4 class="text-center py-2">El Disko - Ca7riel</h4>
             <h5>$5.499</h5>
-            <button onclick="AgregarAlCarrito(`El Disko - Ca7riel` , 5.499 , 11 )" type="button" class="btn btn-light">Agregar al carrito</button>
+            <button onclick="producto6.agregarAlCarrito(producto6)" type="button" class="btn btn-light">Agregar al carrito</button>
         </div>
     </section>
     <hr class="my-0">
