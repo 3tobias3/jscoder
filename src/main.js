@@ -3,7 +3,7 @@ function MasProductos (){
     do{
         switch (eleccionDeProducto){
             case "1":
-                producto3.agregarAlCarrito
+                producto3.agregarAlCarrito(producto3)
                 break;
             case "2":
                 producto2.agregarAlCarrito(producto2)
