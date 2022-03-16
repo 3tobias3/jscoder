@@ -33,9 +33,10 @@ p {
 }
 
 header {
-  background-color: #f5cc27;
-  padding-right: 1.5rem !important;
-  padding-left: 1.5rem !important;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f7cd25), to(#f5b427));
+  background-image: linear-gradient(to right, #f7cd25, #f5b427);
+  padding-right: 2.5rem !important;
+  padding-left: 2.5rem !important;
 }
 
 header a {
@@ -47,32 +48,34 @@ header a:hover {
   color: black;
 }
 
+header nav ul .active {
+  color: rgba(97, 97, 97, 0.624);
+}
+
 header nav ul a {
   text-decoration: none;
   color: black;
+  margin-right: 1rem;
+  border-radius: 0.3rem;
 }
 
 header nav ul a:hover {
-  color: #686868;
+  color: rgba(116, 116, 116, 0.624);
 }
 
 header nav ul li {
   list-style-type: none;
-  margin-right: 1rem;
   padding: 0.3rem;
   border-radius: 0.3rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   font-family: 'Quicksand', sans-serif;
-  border-style: solid;
-  border-width: 1px;
-  border-color: transparent;
-  border-radius: 0.3rem;
 }
 
 header nav ul .btn__carrito {
   background-color: black;
   color: white;
+  padding: 0rem 0.5rem;
 }
 
 header nav ul .btn__carrito:hover {
@@ -116,7 +119,7 @@ footer p {
 }
 
 .catalogo {
-  background-color: #0e0e0e;
+  background-color: #131313;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,6 +134,8 @@ footer p {
 }
 
 .catalogo .producto {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   background-color: black;
   border-style: solid;
   border-width: 1px;
@@ -152,5 +157,12 @@ footer p {
   transition: 0.5s;
   background-color: black;
   color: white;
+  border-color: #f5cc27;
+}
+
+.catalogo .producto:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-color: #f5cc27;
 }
 /*# sourceMappingURL=main.css.map */

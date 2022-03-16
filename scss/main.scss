@@ -27,9 +27,9 @@ p{
 
 
 header{
-    background-color: rgb(245, 204, 39);
-    padding-right: 1.5rem!important;
-    padding-left: 1.5rem!important;
+    background-image: linear-gradient(to right , rgb(247, 205, 37) , rgb(245, 180, 39));
+    padding-right: 2.5rem!important;
+    padding-left: 2.5rem!important;
     a{
         text-decoration: none;
         color: black;
@@ -39,33 +39,35 @@ header{
     }
     nav{
         ul{
+            .active{
+                color: rgba(97, 97, 97, 0.624);
+            }
             a{
                 text-decoration: none;
                 color: black;
+                margin-right: 1rem;
+                border-radius:  0.3rem;
             }
             a:hover{
-                color: rgb(104, 104, 104);
+                color: rgba(116, 116, 116, 0.624);
             }
             li{
                 list-style-type: none;
-                margin-right: 1rem;
                 padding:0.3rem;
                 border-radius:0.3rem;
                 transition:0.3s;
                 font-family: 'Quicksand', sans-serif;
-                border-style:solid;
-                border-width: 1px;
-                border-color: transparent;
-                border-radius:  0.3rem;
             }
             .btn__carrito{
                 background-color:black;
                 color: white;
+                padding: 0rem 0.5rem
             }
             .btn__carrito:hover{
                 transition: 0.3s;
                 color: rgb(167, 167, 167);
             }
+            
         }
     }
 }
@@ -95,13 +97,14 @@ footer{
 }
 
 .catalogo{
-    background-color: rgb(14, 14, 14);
+    background-color: rgb(19, 19, 19);
     display: flex;
     flex-direction: row;
     justify-content:space-around;
     flex-wrap: wrap;
     
     .producto{
+        transition:0.5s;
         background-color: black;
         border-style:solid;
         border-width: 1px;
@@ -117,8 +120,13 @@ footer{
         button:hover{
             transition: 0.5s;
             background-color:black;
-            color: white;
+            color:rgb(255, 255, 255);
+            border-color: rgb(245, 204, 39);
         }
+    }
+    .producto:hover{
+        transition:0.5s;
+        border-color: rgb(245, 204, 39);
     }
 }
 

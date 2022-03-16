@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce</title>
-    <script src="src/main.js"></script>
     <script src="src/practica.js"> </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="scss/main.css">
@@ -17,63 +16,29 @@
     </style>
 </head>
 <body>
-    <header class=" container-fluid d-flex flex-row justify-content-between align-items-center py-2">
-        <a href="index.html"><h1 class="ps-3">Rekord House</h1></a>
-        <nav>
-            <ul class="d-flex flex-row pt-2">
+<!--header y navbar-->
+    <header class="container-fluid d-flex flex-row justify-content-between align-items-center">
+        <!--logo-->
+        <a href="index.html"><h1 class="mb-0">Rekord House</h1></a>
+        <!--nav-->
+        <nav>  
+            <ul class="d-flex flex-row  mb-0">
+                <a href=""><li>Home</li></a>
+                <a class="active" href=""><li>Tienda</li></a>
                 <a href=""><li>Iniciar Sesión</li></a>
-                <a href=""><li>Registrarse</li></a>
                 <button onclick="MostrarCarrito()" type="button" class="btn btn__carrito">Ver carrito</button>
             </ul>
         </nav>
     </header>
 
-    <div class="tienda__titulo">
-        <h2 class="text-center my-0">Tienda</h2>
-    </div>
-    <section class="catalogo px-4 py-4">
-        <div class="producto p-3 d-flex flex-column align-items-center">
-            <img class="img-fluid" src="imgs/beerbongs.jpg" alt="Beerbongs&Bentleys">
-            <h4 class="text-center py-2">Beerbongs & Bentleys - Post Malone</h4>
-            <h5>$4.999</h5>
-            <button onclick="producto1.agregarAlCarrito(producto1) ,  MasProductos()" type="button" class="btn btn-light">Agregar al carrito</button>
-        </div>
-        <div class="producto p-3 d-flex flex-column align-items-center ">
-            <img class="img-fluid" src="imgs/blonde.jpeg" alt="Blonde">
-            <h4 class="text-center py-2">Blonde - Frank Ocean</h4>
-            <h5>$4.499</h5>
-            <button onclick="producto2.agregarAlCarrito(producto2)" type="button" class="btn btn-light">Agregar al carrito</button>
-        </div>
-        <div class="producto p-3 d-flex flex-column align-items-center">
-            <img class="img-fluid" src="imgs/swimming.jpg" alt="Swimming">
-            <h4 class="text-center py-2">Swimming - Mac Miller</h4>
-            <h5>$5.499</h5>
-            <button onclick="producto3.agregarAlCarrito(producto3)" type="button" class="btn btn-light">Agregar al carrito</button>
-        </div>
-        <div class="producto p-3 d-flex flex-column align-items-center">
-            <img class="img-fluid" src="imgs/amoon.jpg" alt="AMoonShapedPool">
-            <h4 class="text-center py-2">A Moon Shaped Pool - Radiohead</h4>
-            <h5>$5.499</h5>
-            <button onclick="producto4.agregarAlCarrito(producto4)" type="button" class="btn btn-light">Agregar al carrito</button>
-        </div>
-        <div class="producto p-3 d-flex flex-column align-items-center">
-            <img class="img-fluid" src="imgs/inrainbws.jpg" alt="InRainbows">
-            <h4 class="text-center py-2">In Rainbows - Radiohead</h4>
-            <h5>$4.999</h5>
-            <button onclick="producto5.agregarAlCarrito(producto5)" type="button" class="btn btn-light">Agregar al carrito</button>
-        </div>
-        <div class="producto p-3 d-flex flex-column align-items-center">
-            <img class="img-fluid" src="imgs/eldisko.jpg" alt="ElDisko">
-            <h4 class="text-center py-2">El Disko - Ca7riel</h4>
-            <h5>$5.499</h5>
-            <button onclick="producto6.agregarAlCarrito(producto6)" type="button" class="btn btn-light">Agregar al carrito</button>
-        </div>
+<!--catalogo de productos-->
+    <section id="listado-productos" class="catalogo px-5 py-4">
     </section>
+<!---------------------------------->
     <hr class="my-0">
-
     <footer>
         <p class="text-center py-3">Rekord House © 2022</p>
     </footer>
-    
+    <script src="src/main.js"></script>
 </body>
 </html>

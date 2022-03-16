@@ -1,3 +1,14 @@
+const carrito = []  
+
+const productos = [
+    {id: 0 , titulo: `Beerbongs & Bentleys - Post Malone`, genero: `HipHop` , precio: 4.999 , stock: 10, cantidad:0 , imagen: `https://http2.mlstatic.com/D_NQ_NP_720716-MLA29007755454_122018-O.jpg`},
+    {id: 1 , titulo: `Blonde - Frank Ocean`, genero: `HipHop` , precio: 4.499 , stock: 0 , cantidad:0 , imagen: `https://www.mondosonoro.com/wp-content/uploads/2016/08/blonde-ocean.jpg`},
+    {id: 2 , titulo: `Swimming - Mac Miller`, genero: `HipHop` , precio: 5.499 , stock: 5 , cantidad:0 , imagen: `https://indierocks.b-cdn.net/wp-content/uploads/2018/08/Mac-Miller.png`},
+    {id: 3 , titulo: `A Moon Shaped Pool - Radiohead`, genero: `Rock Alternativo` , precio: 5.499 , stock: 5 , cantidad:0 , imagen: `https://m.media-amazon.com/images/I/815bmGN5LML._SL1200_.jpg`},
+    {id: 4 , titulo: `In Rainbows - Radiohead`, genero: `Rock Alternativo` , precio: 4.999 , stock: 8 , cantidad:0 , imagen: `https://canchageneral.com/wp-content/uploads/2017/10/rainbows.jpg`},
+    {id: 5 , titulo: `El Disko - Ca7riel`, genero: `HipHop` , precio: 5.499 , stock: 11 , cantidad:0 , imagen:`https://indiehoy.com/wp-content/uploads/2021/11/ca7riel.jpg`},
+]
+
 function MasProductos (){
     let eleccionDeProducto = prompt(`También podria interesarle: \n 1) Swimming - Mac Miller \n 2)Blonde - Frank Ocean \n 3) El Disko - Ca7riel \n Ingrese el número del producto que desea comprar, para salir, ingrese 0`)
     do{
@@ -32,34 +43,36 @@ function MostrarCarrito(){
     
 }
 
-const carrito = []
-
-class producto {
-    constructor(nombre , genero , precio , stock , cantidadPedida){
-        this.nombre = nombre
-        this.genero = genero
-        this.precio = precio 
-        this.stock = stock
-        this.cantidadPedida = cantidadPedida
-    }
-    agregarAlCarrito (producto){
-        this.cantidadPedida = Number(prompt(`¿Qué cantidad desea comprar?`))
-        this.precio = this.precio * this.cantidadPedida
-        const validarStock = (this.stock >= this.cantidadPedida)
-        if (validarStock){
-            carrito.push(producto)
-        }else{
-            console.log(`No hay suficiente stock`)
-        }
+function AgregarAlCarrito(producto){
+    producto.cantidad = Number(prompt(`¿Qué cantidad desea agregar a su carrito?`))
+    producto.precio = producto.precio * producto.cantidad
+    const validarStock = producto.stock >= producto.cantidad
+    if (validarStock){
+        carrito.push(producto)
+    }else{
+        console.log(`No hay suficiente stock`)
     }
 }
 
-const producto1 = new producto (`Beerbongs & Bentleys - Post Malone` , `HipHop` , 4.999 , 10 , 0)
-const producto2 = new producto (`Blonde - Frank Ocean` , `HipHop` , 4.499 , 0 , 0)
-const producto3 = new producto (`Swimming - Mac Miller` , `HipHop` , 5.499 , 5 , 0)
-const producto4 = new producto (`A Moon Shaped Pool - Radiohead` , `Rock Alternativo` , 5.499 , 5 , 0)
-const producto5 = new producto (`In Rainbows - Radiohead` , `Rock Alternativo` , 4.999 , 8 , 0)
-const producto6 = new producto (`El Disko - Ca7riel` , `HipHop` , 5.499 , 11 , 0)
+function GenerarCards(productoAMostrar){
+    let acumulador = "";
+    productoAMostrar.forEach(elemento =>
+        acumulador += `<div class="producto p-3 d-flex flex-column align-items-center">
+        <img class="img-fluid" src="${elemento.imagen}" alt="Portada">
+        <h4 class="text-center py-2">${elemento.titulo}</h4>
+        <h5>$${elemento.precio}<h5>
+        <button onclick="AgregarAlCarrito(productos[${elemento.id}]) ,  MasProductos()" type="button" class="btn btn-light">Agregar al carrito</button>
+    </div>`)
+    MostrarCardsHTML(acumulador)
+}
+
+function MostrarCardsHTML(cards){
+    document.getElementById(`listado-productos`).innerHTML = cards
+}
+
+GenerarCards(productos)
+
+
 
 
 
