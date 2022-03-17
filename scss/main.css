@@ -167,7 +167,7 @@ footer p {
 }
 
 .barra-busqueda {
-  background-color: #212121;
+  background-color: #181818;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -183,19 +183,27 @@ footer p {
           align-items: center;
 }
 
-.barra-busqueda ul {
-  padding: 0rem;
-  list-style: none;
+.barra-busqueda nav button {
+  margin: 0rem 1.3rem;
+  background-color: transparent;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: none;
 }
 
-.barra-busqueda ul li {
-  padding: 0rem 1.3rem;
-  color: white;
+.barra-busqueda nav button:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: transparent;
+  color: #f5cc27;
 }
 
 .barra-busqueda input {
   margin-right: 1rem;
   font-family: 'Quicksand', sans-serif;
+  border-radius: 0.25rem;
+  padding: 0.2rem;
 }
 
 .barra-busqueda .btn-busqueda {

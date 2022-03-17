@@ -17,35 +17,36 @@
 </head>
 <body>
 <!--header y navbar-->
-    <header class="container-fluid d-flex flex-row justify-content-between align-items-center">
-        <!--logo-->
-        <a href="index.html"><h1 class="mb-0">Rekord House</h1></a>
-        <!--nav-->
-        <nav>  
-            <ul class="d-flex flex-row  mb-0">
-                <a href=""><li>Home</li></a>
-                <a class="active" href=""><li>Tienda</li></a>
-                <a href=""><li>Iniciar Sesión</li></a>
-                <button onclick="MostrarCarrito()" type="button" class="btn btn__carrito">Ver carrito</button>
-            </ul>
-        </nav>
-    </header>
-<!--barra de busqueda-->
-    <section class="barra-busqueda py-3">
-            <ul class="d-flex flex-row m-0">
-                <li>Hip Hop</li>
-                <li>Rock</li>
-                <li>Jazz</li>
-                <li>Dance/Electrónica</li>
-                <li>Latino</li>
-                <li>Nacional</li>
-                <li>Internacional</li>
-            </ul>
+        <header class="container-fluid d-flex flex-row justify-content-between align-items-center">
+            <!--logo-->
+            <a href="index.html"><h1 class="mb-0">Rekord House</h1></a>
+            <!--nav-->
+            <nav>  
+                <ul class="d-flex flex-row  mb-0">
+                    <a href=""><li>Home</li></a>
+                    <a class="active" href=""><li>Tienda</li></a>
+                    <a href=""><li>Iniciar Sesión</li></a>
+                    <button onclick="MostrarCarrito()" type="button" class="btn btn__carrito">Ver carrito</button>
+                </ul>
+            </nav>
+        </header>
+    <!--barra de busqueda-->
+        <div class="barra-busqueda py-3">
+            <nav class="d-flex flex-row">
+                <button onclick="" type="button" class="btn btn-light btn-busqueda">Rock</button>
+                <button onclick="" type="button" class="btn btn-light btn-busqueda">Pop</button>
+                <button onclick="" type="button" class="btn btn-light btn-busqueda">Hip Hop</button>
+                <button onclick="" type="button" class="btn btn-light btn-busqueda">Jazz</button>
+                <button onclick="" type="button" class="btn btn-light btn-busqueda">Blues</button>
+                <button onclick="" type="button" class="btn btn-light btn-busqueda">Dance/Electrónica</button>
+                <button onclick="" type="button" class="btn btn-light btn-busqueda">Latino</button>
+                <button onclick="" type="button" class="btn btn-light btn-busqueda">Nacional</button>
+            </nav>
             <div>
-            <input type="text" placeholder="Buscar álbums o géneros">
-            <button type="button" class="btn btn-light btn-busqueda">Buscar</button>
+            <input id="busqueda" type="text" placeholder="¿Qué estas buscando?">
+            <button onclick="buscarProducto()" type="button" class="btn btn-light btn-busqueda">Buscar</button>
             </div>
-    </section>
+        </div>  
 
 <!--catalogo de productos-->
     <section id="listado-productos" class="catalogo px-5 py-4">
