@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce</title>
-    <script src="src/practica.js"> </script>
+    <title>Tiena Online | Rekord House</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="scss/main.css">
     <style>
@@ -25,22 +24,14 @@
                 <ul class="d-flex flex-row  mb-0">
                     <a href=""><li>Home</li></a>
                     <a class="active" href=""><li>Tienda</li></a>
-                    <a href=""><li>Iniciar Sesión</li></a>
                     <button onclick="MostrarCarrito()" type="button" class="btn btn__carrito">Ver carrito</button>
                 </ul>
             </nav>
         </header>
     <!--barra de busqueda-->
         <div class="barra-busqueda py-3">
-            <nav class="d-flex flex-row">
-                <button onclick="" type="button" class="btn btn-light btn-busqueda">Rock</button>
-                <button onclick="" type="button" class="btn btn-light btn-busqueda">Pop</button>
-                <button onclick="" type="button" class="btn btn-light btn-busqueda">Hip Hop</button>
-                <button onclick="" type="button" class="btn btn-light btn-busqueda">Jazz</button>
-                <button onclick="" type="button" class="btn btn-light btn-busqueda">Blues</button>
-                <button onclick="" type="button" class="btn btn-light btn-busqueda">Dance/Electrónica</button>
-                <button onclick="" type="button" class="btn btn-light btn-busqueda">Latino</button>
-                <button onclick="" type="button" class="btn btn-light btn-busqueda">Nacional</button>
+            <nav id="botones-filtro" class="d-flex flex-row">   
+                
             </nav>
             <div>
             <input id="busqueda" type="text" placeholder="¿Qué estas buscando?">
