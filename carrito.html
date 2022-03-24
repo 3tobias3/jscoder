@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="scss/main.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+    </style>
+    <title>Carrito | Rekord House</title>
+</head>
+<body>
+    <header class="container-fluid d-flex flex-row justify-content-between align-items-center">
+        <!--logo-->
+        <a href="index.html"><h1 class="mb-0">Rekord House</h1></a>
+        <!--nav-->
+        <nav>  
+            <ul class="d-flex flex-row  mb-0">
+                <a href=""><li>Home</li></a>
+                <a href="index.html"><li>Tienda</li></a>
+                <a class="active" href="carrito.html"><button onclick="" type="button" class="btn btn__carrito">Ver carrito</button></a>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="d-flex flex-column" id="carrito">
+        <h2 class="validacion-carrito text-center">Tienes 1 producto en su carrito:</h2>
+        <div class="container d-flex flex-row justify-content-between align-items-center producto-carrito">
+            <img class="foto-producto-carrito img-fluid" src="imgs/beerbongs.jpg" alt="">
+            <h5>Beerbongs & Bentleys - Post Malone</h5>
+            <h5 >1</h5>
+            <h5>$4.999</h5>
+        </div>
+    </section>
+    
+    <h1 class="ps-4 titulo-recomendados-carrito">También podría interesarte:</h1>
+    <hr class="my-0">  
+    <section id="recomendados">
+        <div class="d-flex flex-row justify-content-between">
+            <div class="producto p-3 d-flex flex-column align-items-center">
+                <img class="img-fluid" src="imgs/amoon.jpg" alt="Portada">
+                <h3 class="text-center py-2">A Moon Shaped Pool - Radiohead</h3>
+                <h4>$5.499<h4>
+                <button onclick="" type="button" class="btn btn-light">Agregar al carrito</button>
+            </div>
+            <div class="producto p-3 d-flex flex-column align-items-center">
+                <img class="img-fluid" src="imgs/inrainbws.jpg" alt="Portada">
+                <h3 class="text-center py-2">In Rainbows - Radiohead</h3>
+                <h4>$4.999<h4>
+                <button onclick="prueba()" type="button" class="btn btn-light">Agregar al carrito</button>
+            </div>
+            <div class="producto p-3 d-flex flex-column align-items-center">
+                <img class="img-fluid" src="imgs/swimming.jpg" alt="Portada">
+                <h3 class="text-center py-2">Swimming - Mac Miller</h3>
+                <h4>$5.499<h4>
+                <button onclick="" type="button" class="btn btn-light">Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-0">
+    <footer>
+        <p class="text-center py-3">Rekord House © 2022</p>
+    </footer>
+    <script src="src/carrito.js"></script>
+</body>
+</html>

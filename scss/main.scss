@@ -9,16 +9,22 @@ h1{
     font-family: 'Righteous', cursive;
 }
 h2{
-    font-family: 'Righteous', cursive;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-size: larger;
+}
+h3{
+    color: white;
+    font-size:medium;
+    font-family: 'Quicksand', sans-serif;
 }
 h4{
     color: white;
-    font-size: small;
+    font-size: smaller;
     font-family: 'Quicksand', sans-serif;
 }
 h5{
-    color: white;
-    font-size: smaller;
+    color: black;
     font-family: 'Quicksand', sans-serif;
 }
 p{
@@ -165,5 +171,59 @@ footer{
     }
 }
 
+#carrito{
+    padding: 1rem 5rem 2rem 5rem;
+    background-color:black;
+    .producto-carrito{
+        background-image: linear-gradient(to right , rgb(247, 205, 37) , rgb(245, 163, 39));
+        border-radius: 0.3rem;
+        width:50%;
+        padding: 0.3rem 0.8rem;
+        margin-bottom: 0.5rem;
+        .foto-producto-carrito{
+            width:10%;
+        }
+    }
+}
 
+.titulo-recomendados-carrito{
+    background-color:black;
+    color:rgb(245, 204, 39);
+    margin: 0px;
+    font-size: 170%;
+}
 
+#recomendados{
+    background-color: black;
+    padding: 0.5rem 2rem;
+    h1{
+        color: rgb(245, 204, 39);
+        margin: 0px;
+        font-size:170%;
+    }
+    .producto{
+        margin: 1rem 1rem;
+        width:33%;
+        border-style:solid;
+        border-width: 1px;
+        border-color: white;
+        border-radius: 1rem;
+        button{
+            transition: 0.5s;
+            font-family: 'Quicksand', sans-serif;
+        }
+        button:hover{
+            transition: 0.5s;
+            background-color:black;
+            color:rgb(255, 255, 255);
+            border-color: rgb(245, 204, 39);
+        }
+        img{
+            width: 60%;
+        }
+    }
+    .producto:hover{
+        transition:0.5s;
+        border-color: rgb(245, 204, 39);
+    }
+}

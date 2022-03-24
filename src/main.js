@@ -1,5 +1,4 @@
-const carrito = []  
-
+//BASE DE DATOS DE PRODUCTOS
 const productos = [
     {id: 0 , titulo: `Beerbongs & Bentleys - Post Malone`, genero: `HipHop` , precio: 4.999 , stock: 10, cantidad:0 , imagen: `https://http2.mlstatic.com/D_NQ_NP_720716-MLA29007755454_122018-O.jpg`},
     {id: 1 , titulo: `Blonde - Frank Ocean`, genero: `HipHop` , precio: 4.499 , stock: 0 , cantidad:0 , imagen: `https://www.mondosonoro.com/wp-content/uploads/2016/08/blonde-ocean.jpg`},
@@ -18,28 +17,27 @@ const productos = [
     {id: 14 , titulo: `Future Nostalgia - Dua Lipa`, genero: `Pop`, precio: 5.999 , stock: 10 , cantidad:0 , imagen:`https://m.media-amazon.com/images/I/71VQFsqlPJL._SL1425_.jpg`},
 ]
 
-function MasProductos (){
-    let eleccionDeProducto = prompt(`También podria interesarle: \n 1) Swimming - Mac Miller \n 2)Blonde - Frank Ocean \n 3) El Disko - Ca7riel \n Ingrese el número del producto que desea comprar, para salir, ingrese 0`)
-    do{
-        switch (eleccionDeProducto){
-            case "1":
-                AgregarAlCarrito(productos[2])
-                break;
-            case "2":
-                AgregarAlCarrito(productos[1])
-                break;
-            case "3":
-                AgregarAlCarrito(productos[5])
-                break;
-            case "0":
-                break;
-            default:
-                alert(`El valor ingresado no es válido`)
-                eleccionDeProducto = prompt(`También podria interesarle: \n 1) Swimming - Mac Miller \n 2)Blonde - Frank Ocean \n 3) El Disko - Ca7riel \n Ingrese el número del producto que desea comprar, para salir, ingrese 0`) 
-        }
-    }while ((eleccionDeProducto < 0) || (eleccionDeProducto > 3))
+//GENERAR CATALOGO DE PRODUCTOS
+function GenerarCards(productoAMostrar){
+    let acumulador = "";
+    productoAMostrar.forEach(elemento =>
+        acumulador += `<div class="producto p-3 d-flex flex-column align-items-center">
+        <img class="img-fluid" src="${elemento.imagen}" alt="Portada">
+        <h3 class="text-center py-2">${elemento.titulo}</h3>
+        <h4>$${elemento.precio}<h4>
+        <button onclick="AgregarAlCarrito(productos[${elemento.id}])" type="button" class="btn btn-light">Agregar al carrito</button>
+    </div>`)
+    MostrarCardsHTML(acumulador)
 }
 
+function MostrarCardsHTML(cards){
+    document.getElementById(`listado-productos`).innerHTML = cards
+}
+
+GenerarCards(productos)
+
+
+//CARRITO//
 function MostrarCarrito(){
     let precioTotal = 0
         carrito.forEach(producto => {
@@ -61,38 +59,27 @@ function AgregarAlCarrito(producto){
     }else{
         console.log(`No hay suficiente stock`)
     }
-    
 }
 
-function GenerarCards(productoAMostrar){
-    let acumulador = "";
-    productoAMostrar.forEach(elemento =>
-        acumulador += `<div class="producto p-3 d-flex flex-column align-items-center">
-        <img class="img-fluid" src="${elemento.imagen}" alt="Portada">
-        <h4 class="text-center py-2">${elemento.titulo}</h4>
-        <h5>$${elemento.precio}<h5>
-        <button onclick="AgregarAlCarrito(productos[${elemento.id}]) ,  MasProductos()" type="button" class="btn btn-light">Agregar al carrito</button>
-    </div>`)
-    MostrarCardsHTML(acumulador)
-}
+localStorage.setItem("carrito", JSON.stringify(carrito))
 
-function MostrarCardsHTML(cards){
-    document.getElementById(`listado-productos`).innerHTML = cards
-}
-
-GenerarCards(productos)
-
-
+// INPUT PARA BUSCAR PRODUCTOS
 function buscarProducto(){
     const productoBuscado = document.getElementById("busqueda").value.trim().toUpperCase()
-
     const productoEncontrado = productos.filter((elemento) => {
         return elemento.titulo.toUpperCase().match(productoBuscado)
     })
-
     GenerarCards(productoEncontrado)
 }
+// evento!
+let busqueda = document.getElementById("busqueda")
+busqueda.onkeydown = (e) => {
+    if (e.keyCode === 13) {
+        buscarProducto()
+    } 
+}
 
+// BARRA DE BOTONES PARA FILTRAR PRODUCTOS
 const botonesFiltro = [
 {id: 0 , nombre: `Rock` },
 {id: 1 , nombre:`Pop`},

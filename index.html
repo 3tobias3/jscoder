@@ -24,7 +24,7 @@
                 <ul class="d-flex flex-row  mb-0">
                     <a href=""><li>Home</li></a>
                     <a class="active" href=""><li>Tienda</li></a>
-                    <button onclick="MostrarCarrito()" type="button" class="btn btn__carrito">Ver carrito</button>
+                    <a href="carrito.html"><button onclick="" type="button" class="btn btn__carrito">Ver carrito</button></a>
                 </ul>
             </nav>
         </header>
@@ -35,7 +35,7 @@
             </nav>
             <div>
             <input id="busqueda" type="text" placeholder="¿Qué estas buscando?">
-            <button onclick="buscarProducto()" type="button" class="btn btn-light btn-busqueda">Buscar</button>
+            <button id="boton-busqueda" onclick="buscarProducto()" type="button" class="btn btn-light btn-busqueda">Buscar</button>
             </div>
         </div>  
 
@@ -47,6 +47,7 @@
     <footer>
         <p class="text-center py-3">Rekord House © 2022</p>
     </footer>
+    <script src="src/carrito.js"></script>
     <script src="src/main.js"></script>
 </body>
 </html>
