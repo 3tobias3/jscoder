@@ -1,229 +1,247 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
 }
-html{
+html {
     box-sizing: border-box;
 }
-h1{
-    font-family: 'Righteous', cursive;
+h1 {
+    font-family: "Righteous", cursive;
 }
-h2{
-    font-family: 'Quicksand', sans-serif;
+h2 {
+    font-family: "Quicksand", sans-serif;
     color: white;
-    font-size: larger;
+    font-size:larger;
 }
-h3{
+h3 {
     color: white;
-    font-size:medium;
-    font-family: 'Quicksand', sans-serif;
+    font-size: medium;
+    font-family: "Quicksand", sans-serif;
 }
-h4{
+h4 {
     color: white;
     font-size: smaller;
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
 }
-h5{
+h5 {
     color: black;
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
 }
-p{
+p {
     margin: 0px;
 }
 
-header{
-    background-image: linear-gradient(to right , rgb(247, 205, 37) , rgb(245, 163, 39));
-    padding-right: 2.5rem!important;
-    padding-left: 2.5rem!important;
+header {
+    background-image: linear-gradient(to right, rgb(247, 205, 37), rgb(245, 163, 39));
+    padding-right: 2.5rem !important;
+    padding-left: 2.5rem !important;
 
-    a{
+    a {
         text-decoration: none;
         color: black;
     }
-    a:hover{
+    a:hover {
         color: black;
     }
-    nav{
-        ul{
-            .active{
+    nav {
+        ul {
+            .active {
                 color: rgba(97, 97, 97, 0.624);
             }
-            a{
+            a {
                 text-decoration: none;
                 color: black;
                 margin-right: 1rem;
-                border-radius:  0.3rem;
+                border-radius: 0.3rem;
             }
-            a:hover{
+            a:hover {
                 color: rgba(116, 116, 116, 0.624);
             }
-            li{
+            li {
                 list-style-type: none;
-                padding:0.3rem;
-                border-radius:0.3rem;
-                transition:0.3s;
-                font-family: 'Quicksand', sans-serif;
+                padding: 0.3rem;
+                border-radius: 0.3rem;
+                transition: 0.3s;
+                font-family: "Quicksand", sans-serif;
             }
-            .btn__carrito{
-                background-color:black;
+            .btn__carrito {
+                background-color: rgb(0, 0, 0);
                 color: white;
-                padding: 0rem 0.5rem
+                padding: 0rem 0.5rem;
+                span{
+                    color: rgb(245, 163, 39);
+                }
             }
-            .btn__carrito:hover{
+            .btn__carrito:hover {
                 transition: 0.3s;
                 color: rgb(167, 167, 167);
             }
-            
         }
     }
 }
 
-footer{
-    background-color:black;
-    p{
+footer {
+    background-color: black;
+    p {
         color: white;
-        font-family: 'Quicksand', sans-serif;
+        font-family: "Quicksand", sans-serif;
     }
-    height:4rem;
+    height: 4rem;
 }
 
-.tienda__titulo{
+.tienda__titulo {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color:rgb(14, 14, 14);
-    h2{
+    background-color: rgb(14, 14, 14);
+    h2 {
         width: min-content;
-        background-color:rgb(245, 204, 39);
+        background-color: rgb(245, 204, 39);
         color: black;
         padding: 0rem 0.5rem;
-        border-bottom-left-radius:  0.3rem;
-        border-bottom-right-radius:  0.3rem;
+        border-bottom-left-radius: 0.3rem;
+        border-bottom-right-radius: 0.3rem;
     }
 }
 
-.catalogo{
+.catalogo {
     background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: row;
-    justify-content:space-around;
+    justify-content: space-around;
     flex-wrap: wrap;
-    
-    .producto{
-        transition:0.5s;
+
+    .producto {
+        transition: 0.5s;
         background-color: black;
-        border-style:solid;
+        border-style: solid;
         border-width: 1px;
         border-color: white;
         border-radius: 1rem;
         width: 25%;
         height: 33%;
         margin: 0rem 1rem 2rem 1rem;
-        button{
+        button {
             transition: 0.5s;
-            font-family: 'Quicksand', sans-serif;
+            font-family: "Quicksand", sans-serif;
         }
-        button:hover{
+        button:hover {
             transition: 0.5s;
-            background-color:black;
-            color:rgb(255, 255, 255);
+            background-color: black;
+            color: rgb(255, 255, 255);
             border-color: rgb(245, 204, 39);
         }
     }
-    .producto:hover{
-        transition:0.5s;
+    .producto:hover {
+        transition: 0.5s;
         border-color: rgb(245, 204, 39);
     }
 }
 
-.barra-busqueda{
+.input-cantidad{
+    width: 10%;
+    border-radius: 0.3rem;
+}
+
+.barra-busqueda {
     background-color: rgb(24, 24, 24);
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    nav{
-        button{
+    nav {
+        button {
             margin: 0rem 1.3rem;
-            background-color:transparent;
+            background-color: transparent;
             color: white;
             transition: 0.5s;
             border: none;
         }
-        button:hover{
+        button:hover {
             transition: 0.5s;
             background-color: transparent;
             color: rgb(245, 204, 39);
         }
     }
-    input{
-        margin-right:1rem;
-        font-family: 'Quicksand', sans-serif;;
-        border-radius: 0.25rem;;
+    input {
+        margin-right: 1rem;
+        font-family: "Quicksand", sans-serif;
+        border-radius: 0.25rem;
         padding: 0.2rem;
     }
-    .btn-busqueda{
-        padding:0rem 0.5rem;
-        font-family: 'Quicksand', sans-serif;
+    .btn-busqueda {
+        padding: 0rem 0.5rem;
+        font-family: "Quicksand", sans-serif;
     }
-    .btn-busqueda ::after{
+    .btn-busqueda ::after {
         box-shadow: none;
     }
 }
+#carrito-texto{
+    background-color: black;
+    padding: 1rem 0rem;
+    h2{
+        margin:0px;
+    }
 
-#carrito{
+
+}
+#carrito {
     padding: 1rem 5rem 2rem 5rem;
-    background-color:black;
-    .producto-carrito{
-        background-image: linear-gradient(to right , rgb(247, 205, 37) , rgb(245, 163, 39));
+    background-color: black;
+    .producto-carrito {
+        background-image: linear-gradient(to right, rgb(247, 205, 37), rgb(245, 163, 39));
         border-radius: 0.3rem;
-        width:50%;
+        width: 50%;
         padding: 0.3rem 0.8rem;
         margin-bottom: 0.5rem;
-        .foto-producto-carrito{
-            width:10%;
+        .foto-producto-carrito {
+            width: 10%;
         }
     }
 }
 
-.titulo-recomendados-carrito{
-    background-color:black;
-    color:rgb(245, 204, 39);
+.titulo-recomendados-carrito {
+    background-color: black;
+    color: rgb(245, 204, 39);
     margin: 0px;
     font-size: 170%;
 }
 
-#recomendados{
+#recomendados {
     background-color: black;
     padding: 0.5rem 2rem;
-    h1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    h1 {
         color: rgb(245, 204, 39);
         margin: 0px;
-        font-size:170%;
+        font-size: 170%;
     }
-    .producto{
-        margin: 1rem 1rem;
-        width:33%;
-        border-style:solid;
+    .producto {
+        margin: 1rem;
+        width: 30%;
+        border-style: solid;
         border-width: 1px;
         border-color: white;
         border-radius: 1rem;
-        button{
+        button {
             transition: 0.5s;
-            font-family: 'Quicksand', sans-serif;
+            font-family: "Quicksand", sans-serif;
         }
-        button:hover{
+        button:hover {
             transition: 0.5s;
-            background-color:black;
-            color:rgb(255, 255, 255);
+            background-color: black;
+            color: rgb(255, 255, 255);
             border-color: rgb(245, 204, 39);
         }
-        img{
-            width: 60%;
+        img {
+            width: 55%;
         }
     }
-    .producto:hover{
-        transition:0.5s;
+    .producto:hover {
+        transition: 0.5s;
         border-color: rgb(245, 204, 39);
     }
 }

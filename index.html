@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiena Online | Rekord House</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="scss/main.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
@@ -14,39 +16,52 @@
         @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
     </style>
 </head>
-<body>
-<!--header y navbar-->
-        <header class="container-fluid d-flex flex-row justify-content-between align-items-center">
-            <!--logo-->
-            <a href="index.html"><h1 class="mb-0">Rekord House</h1></a>
-            <!--nav-->
-            <nav>  
-                <ul class="d-flex flex-row  mb-0">
-                    <a href=""><li>Home</li></a>
-                    <a class="active" href=""><li>Tienda</li></a>
-                    <a href="carrito.html"><button onclick="" type="button" class="btn btn__carrito">Ver carrito</button></a>
-                </ul>
-            </nav>
-        </header>
-    <!--barra de busqueda-->
-        <div class="barra-busqueda py-3">
-            <nav id="botones-filtro" class="d-flex flex-row">   
-                
-            </nav>
-            <div>
-            <input id="busqueda" type="text" placeholder="¿Qué estas buscando?">
-            <button id="boton-busqueda" onclick="buscarProducto()" type="button" class="btn btn-light btn-busqueda">Buscar</button>
-            </div>
-        </div>  
 
-<!--catalogo de productos-->
+<body id="body">
+    <!--header y navbar-->
+    <header class="container-fluid d-flex flex-row justify-content-between align-items-center">
+        <!--logo-->
+        <a href="index.html">
+            <h1 class="mb-0">Rekord House</h1>
+        </a>
+        <!--nav-->
+        <nav>
+            <ul class="d-flex flex-row align-items-center mb-0">
+                <a href="">
+                    <li>Home</li>
+                </a>
+                <a class="" href="index.html">
+                    <li>Tienda</li>
+                </a>
+                <a class="" href="carrito.html">
+                    <button class="btn__carrito btn">
+                        Ver Carrito <span id="cantidad-carrito"></span>
+                    </button>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <!--barra de busqueda-->
+    <div class="barra-busqueda py-3">
+        <nav id="botones-filtro" class="d-flex flex-row">
+
+        </nav>
+        <div>
+            <input id="busqueda" type="text" placeholder="¿Qué estas buscando?">
+            <button id="boton-busqueda" onclick="buscarProducto()" type="button"
+                class="btn btn-light btn-busqueda">Buscar</button>
+        </div>
+    </div>
+
+    <!--catalogo de productos-->
     <section id="listado-productos" class="catalogo px-5 py-4">
     </section>
-<!---------------------------------->
+    <!---------------------------------->
     <hr class="my-0">
     <footer>
         <p class="text-center py-3">Rekord House © 2022</p>
     </footer>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="src/carrito.js"></script>
     <script src="src/main.js"></script>
 </body>
