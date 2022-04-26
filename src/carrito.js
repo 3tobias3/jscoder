@@ -25,7 +25,7 @@ function validarStorageCarrito() {
         return storageCarrito
     }
     else {
-        return []
+        return null
     }
 }
 
@@ -40,61 +40,44 @@ function AgregarAlCarrito(producto) {
     } else {
         swal("Oops!", "Nos hemos quedado sin stock de este producto :(");
     }
+    localStorage.setItem(`carrito`, JSON.stringify(carrito))
 }
 
 document.getElementById(`cantidad-carrito`).innerHTML = carrito.length
 
-localStorage.setItem(`carrito`, JSON.stringify(carrito))
+function textoCarrito(){
+    let texto = `<h5>Tienes ${carrito.length} producto/s en el carrito</h5>`
+    document.getElementById(`exampleModalLabel`).innerHTML = texto
+}
+
+textoCarrito()
 
 // mostrar productos del carrito //
 
-function generarCardsCarrito(productoAMostrar) {
-    let acumulador = "";
-    productoAMostrar.forEach(elemento =>
-        acumulador += `<div class="container d-flex flex-row justify-content-between align-items-center producto-carrito">
-        <img class="foto-producto-carrito img-fluid" src="${elemento.imagen}" alt="">
-        <h5>${elemento.titulo}</h5>
-        <h5 >${elemento.cantidad}</h5>
-        <h5>$${elemento.precio}</h5>
-    </div>`)
-    mostrarCarritoHTML(acumulador)
-}
+// function generarCardsCarrito(productoAMostrar) {
+//    let acumulador = "";
+//    productoAMostrar.forEach(elemento =>
+//        acumulador += `<div class="container d-flex flex-row justify-content-between align-items-center producto-carrito">
+//        <img class="foto-producto-carrito img-fluid" src="${elemento.imagen}" alt="">
+//        <h5>${elemento.titulo}</h5>
+//        <h5 >${elemento.cantidad}</h5>
+//        <h5>$${elemento.precio}</h5>
+//    </div>`)
+//    mostrarCarritoHTML(acumulador)
+//}
 
-function mostrarCarritoHTML(productos) {
-    document.getElementById("carrito").innerHTML = productos
-}
+//function mostrarCarritoHTML(productos) {
+//    document.getElementById("carrito").innerHTML = productos
+//}
 
-generarCardsCarrito(carrito)
+//generarCardsCarrito(carrito)
 
 // texto de pag carrito //
 
-function textoCarrito(cantidad) {
-    let texto = `<h2 class="text-center">Tienes ${cantidad.length} producto/s en el carrito</h2>`
-    document.getElementById("carrito-texto").innerHTML = texto
-}
+//function textoCarrito(cantidad) {
+//    let texto = `<h2 class="text-center">Tienes ${cantidad.length} producto/s en el carrito</h2>`
+//    document.getElementById("carrito-texto").innerHTML = texto
+//}
 
-textoCarrito(carrito)
+//textoCarrito(carrito)
 
-// productos recomendados en pag de carrito //
-
-function generarCardsRecomendadas(productoAMostrar) {
-    let card = "";
-    let num = 0
-    while (num != 3) {
-        card += `<div class="producto p-3 d-flex flex-column align-items-center">
-        <img class="img-fluid" src="${productoAMostrar[num].imagen}" alt="Portada">
-        <h3 class="text-center py-2">${productoAMostrar[num].titulo}</h3>
-        <h4>$${productoAMostrar[num].precio}</h4>
-        <input value="1" min="1" id="cantidad-${productoAMostrar[num].id}" type="number" class="input-cantidad my-2"> 
-        <button onclick="AgregarAlCarrito(productos[${productoAMostrar[num].id}])" type="button" class="btn btn-light">Agregar al carrito</button>
-    </div>`
-        num = num + 1
-    }
-    mostrarCardsRecomendadas(card)
-}
-
-function mostrarCardsRecomendadas(cards) {
-    document.getElementById(`recomendados`).innerHTML = cards
-}
-
-generarCardsRecomendadas(productos)

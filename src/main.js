@@ -65,6 +65,11 @@ function MostrarBotonesFiltro(botones){
 
 GenerarBotones(botonesFiltro)
 
+function prueba (){
+    console.log(carrito)
+}
+
+prueba()
 
 
 
