@@ -52,32 +52,22 @@ function textoCarrito(){
 
 textoCarrito()
 
-// mostrar productos del carrito //
+// GENERAR CARRITO EN EL MODAL //
+function generarCarrito(productoAMostrar){
+    let acumulador = "";
+    productoAMostrar.forEach(elemento =>
+        acumulador += `<div class="producto-carrito d-flex flex-row justify-content-between align-items-center mb-3">
+        <img class="img-fluid" src="${elemento.imagen}" alt="fotoProducto">
+        <h5>${elemento.titulo}</h5>
+        <h5>${elemento.cantidad}</h5>
+        <h5>$${elemento.precio}</h5>
+        <button type="button" class="btn-close"></button>
+    </div>`)
+    mostrarProductosHTML(acumulador)
+}
 
-// function generarCardsCarrito(productoAMostrar) {
-//    let acumulador = "";
-//    productoAMostrar.forEach(elemento =>
-//        acumulador += `<div class="container d-flex flex-row justify-content-between align-items-center producto-carrito">
-//        <img class="foto-producto-carrito img-fluid" src="${elemento.imagen}" alt="">
-//        <h5>${elemento.titulo}</h5>
-//        <h5 >${elemento.cantidad}</h5>
-//        <h5>$${elemento.precio}</h5>
-//    </div>`)
-//    mostrarCarritoHTML(acumulador)
-//}
+function mostrarProductosHTML(productos){
+    document.getElementById(`carritoModal`).innerHTML = productos
+}
 
-//function mostrarCarritoHTML(productos) {
-//    document.getElementById("carrito").innerHTML = productos
-//}
-
-//generarCardsCarrito(carrito)
-
-// texto de pag carrito //
-
-//function textoCarrito(cantidad) {
-//    let texto = `<h2 class="text-center">Tienes ${cantidad.length} producto/s en el carrito</h2>`
-//    document.getElementById("carrito-texto").innerHTML = texto
-//}
-
-//textoCarrito(carrito)
-
+generarCarrito(carrito)
