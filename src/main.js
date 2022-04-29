@@ -34,7 +34,6 @@ busqueda.onkeydown = (e) => {
         buscarProducto()
     } 
 }
-
 // BARRA DE BOTONES PARA FILTRAR PRODUCTOS
 const botonesFiltro = [
 {id: 0 , nombre: `Rock` },
