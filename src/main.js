@@ -6,7 +6,7 @@ function GenerarCards(productoAMostrar){
         <img class="img-fluid" src="${elemento.imagen}" alt="Portada">
         <h3 class="text-center py-2">${elemento.titulo}</h3>
         <h4>$${elemento.precio}</h4>
-        <input value="1" min="1" id="cantidad-${elemento.id}" type="number" class="input-cantidad my-2"> 
+        <input value="1" min="0" id="cantidad-${elemento.id}" type="number" class="input-cantidad my-2"> 
         <button onclick="AgregarAlCarrito(productos[${elemento.id}])" type="button" class="btn btn-light">Agregar al carrito</button>
     </div>`)
     MostrarCardsHTML(acumulador)

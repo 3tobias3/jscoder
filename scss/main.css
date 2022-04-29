@@ -252,7 +252,7 @@ footer p {
 }
 
 .modal-body {
-  background-color: #dfdfdf;
+  background-color: white;
 }
 
 .modal-dialog {
@@ -285,5 +285,9 @@ footer p {
   border-color: black;
   border-style: groove;
   border-width: 0px 0px 1px 0px;
+}
+
+.producto-carrito .producto-carrito-titulo {
+  width: 250px;
 }
 /*# sourceMappingURL=main.css.map */

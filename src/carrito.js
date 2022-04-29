@@ -25,7 +25,7 @@ function validarStorageCarrito() {
         return storageCarrito
     }
     else {
-        return null
+        return []
     }
 }
 
@@ -53,12 +53,16 @@ function textoCarrito(){
 textoCarrito()
 
 // GENERAR CARRITO EN EL MODAL //
+function mostrarProductosHTML(productos){
+    document.getElementById(`carritoModal`).innerHTML = productos
+}
+
 function generarCarrito(productoAMostrar){
     let acumulador = "";
     productoAMostrar.forEach(elemento =>
         acumulador += `<div class="producto-carrito d-flex flex-row justify-content-between align-items-center mb-3">
         <img class="img-fluid" src="${elemento.imagen}" alt="fotoProducto">
-        <h5>${elemento.titulo}</h5>
+        <h5 class="producto-carrito-titulo">${elemento.titulo}</h5>
         <h5>${elemento.cantidad}</h5>
         <h5>$${elemento.precio}</h5>
         <button type="button" class="btn-close"></button>
@@ -66,8 +70,5 @@ function generarCarrito(productoAMostrar){
     mostrarProductosHTML(acumulador)
 }
 
-function mostrarProductosHTML(productos){
-    document.getElementById(`carritoModal`).innerHTML = productos
-}
-
 generarCarrito(carrito)
+
